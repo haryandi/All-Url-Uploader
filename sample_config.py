@@ -1,4 +1,6 @@
-# MIT License
+
+    
+    # MIT License
 
 # Copyright (c) 2022 Hash Minner
 
@@ -25,11 +27,11 @@
 class Config(object):
 
     # get a token from @BotFather
-    BOT_TOKEN = ""
+    BOT_TOKEN = "5912058120:AAHfr-m_erMHiL6fqoSUxguSrL7jOEdXPGs"
 
     # Get these values from my.telegram.org
-    API_ID = 1234567
-    API_HASH = ""
+    API_ID = 27386985
+    API_HASH = "337303f9e609e0b9ad977b776ae6c4ca"
 
     # No need to change
     DOWNLOAD_LOCATION = "./DOWNLOADS"
@@ -41,10 +43,10 @@ class Config(object):
 
     # TG Ids
     LOG_CHANNEL = -1007119867241
-    OWNER_ID = 1288398723
+    OWNER_ID = 5537296426
 
     # bot username without @
-    BOT_USERNAME = "AdvanceUrlUploaderBot"
+    BOT_USERNAME = "aploudfile_bot"
 
     # auth users
     AUTH_USERS = [OWNER_ID]
