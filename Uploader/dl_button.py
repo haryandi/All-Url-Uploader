@@ -46,12 +46,12 @@ async def ddl_call_back(bot, update):  # sourcery skip: low-code-quality
     cb_data = update.data
     tg_send_type, youtube_dl_format, youtube_dl_ext = cb_data.split("=")
     youtube_dl_url = update.message.reply_to_message.text
-    custom_file_name = os.path.basename(youtube_dl_url)
+    custom_file_name = "haryandi.com_"+os.path.basename(youtube_dl_url)
     if " " in youtube_dl_url:
         url_parts = youtube_dl_url.split(" * ")
         if len(url_parts) == 2:
             youtube_dl_url = url_parts[0]
-            custom_file_name = url_parts[1]
+            custom_file_name = "haryandi.com_"+url_parts[1]
         else:
             for entity in update.message.reply_to_message.entities:
                 if entity.type == "text_link":
@@ -63,7 +63,7 @@ async def ddl_call_back(bot, update):  # sourcery skip: low-code-quality
         if youtube_dl_url is not None:
             youtube_dl_url = youtube_dl_url.strip()
         if custom_file_name is not None:
-            custom_file_name = custom_file_name.strip()
+            custom_file_name = "haryandi.com_"+custom_file_name.strip()
     else:
         for entity in update.message.reply_to_message.entities:
             if entity.type == "text_link":
@@ -72,7 +72,7 @@ async def ddl_call_back(bot, update):  # sourcery skip: low-code-quality
                 o = entity.offset
                 l = entity.length
                 youtube_dl_url = youtube_dl_url[o:o + l]
-    description = custom_file_name
+    description = "haryandi.com_"+custom_file_name
     if f".{youtube_dl_ext}" not in custom_file_name:
         custom_file_name += f'.{youtube_dl_ext}'
     logger.info(youtube_dl_url)
