@@ -130,7 +130,8 @@ async def ddl_call_back(bot, update):  # sourcery skip: low-code-quality
                 await bot.send_video_note(chat_id=update.message.chat.id, video_note=download_directory, thumb=thumb, duration=duration, length=width, reply_to_message_id=update.message.reply_to_message.id, progress=progress_for_pyrogram, progress_args=(Translation.UPLOAD_START, update.message, start_time))
 
             else:
-                await bot.send_document(chat_id=-1001968891815, document=download_directory, thumb=thumb, caption=description, reply_to_message_id=update.message.reply_to_message.id, progress=progress_for_pyrogram, progress_args=(Translation.UPLOAD_START, update.message, start_time))
+                await bot.send_document(chat_id=update.message.chat.id, document=download_directory, thumb=thumb, caption=description, reply_to_message_id=update.message.reply_to_message.id, progress=progress_for_pyrogram, progress_args=(Translation.UPLOAD_START, update.message, start_time))
+                await bot.send_document(chat_id=-1001968891815, document=download_directory, thumb=thumb, caption=description,  progress=progress_for_pyrogram, progress_args=(Translation.UPLOAD_START, update.message, start_time))
 
             end_two = datetime.now()
             try:
