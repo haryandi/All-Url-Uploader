@@ -36,10 +36,10 @@ class Config(object):
     # No need to change
     DOWNLOAD_LOCATION = "./DOWNLOADS"
     ADL_BOT_RQ = {}
-    CHUNK_SIZE = 128
+    CHUNK_SIZE = 158
     TG_MAX_FILE_SIZE = 4194304000
     HTTP_PROXY = ""
-    PROCESS_MAX_TIMEOUT = 3700
+    PROCESS_MAX_TIMEOUT = 37000
 
     # TG Ids
     LOG_CHANNEL = -1007119867241
